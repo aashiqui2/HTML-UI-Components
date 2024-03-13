@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        section{
+            height: 100vh;
+            width: 100%;
+            background: #000;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        section .loading{
+            height: 25px;
+            width: 25px;
+            /* background-color: red; */
+            position: relative;
+        }
+        .loading .ball{
+            height: 25px;
+            width: 25px;
+            background: blue;
+            position: absolute;
+            border-radius: 50%;
+        }
+        .loading .upper{
+            left: 0;            
+            top: -25px;
+            background: #2da2ff;
+            animation: upper 1s infinite;
+        }
+        @keyframes upper{
+            50%,100%{
+                top: 25px;                
+            }
+        }
+        .loading .right{
+            bottom: 0;            
+            right: -25px;
+            background: #ff337a;
+            animation: right 1s infinite;
+        }
+        @keyframes right{
+            50%,100%{
+                right: 25px;
+                
+            }
+        }
+        .loading .lower{
+            bottom:-25px;            
+            right:0;
+            background: #ffff00;
+            animation: lower 1s infinite;
+        }
+        @keyframes lower{
+            50%,100%{
+                bottom: 25px;
+                
+            }
+        }
+        .loading .left{
+            left:-25px;            
+            right:0;
+            background: #00ff00;
+              animation: left 1s infinite;
+        }
+        @keyframes left{
+            50%,100%{
+                left: 25px;
+                
+            }
+        }
+       
+    </style>
+</head>
+<body>
+    <section>
+        <div class="loading">
+            <div class="upper ball"></div>
+            <div class="right ball"></div>
+            <div class="lower ball"></div>
+            <div class="left ball"></div>
+        </div>
+    </section>
+    
+</body>
+</html>

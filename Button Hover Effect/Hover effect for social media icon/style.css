@@ -1,0 +1,52 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.container{
+    width:100%;
+    height:100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background:#f2f2fe
+}
+.icons a{
+    display:inline-flex;
+    width: 100px;
+    height: 100px;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    font-size: 40px;
+    /* background: #fff; */
+    margin: 10px;
+    box-shadow: 0 10px 10px rgba(0,0,0,0.1);
+
+    /* color start from top to  bottom  */
+    /* background-image: linear-gradient(#fff 50%,red 50%); */
+    /* first value: width of the image, second value: height */
+    background-size: 100% 200%;
+    /* x and y axis values  */
+    /* background-position: 0% 5%; */
+    /* transition:background-position 0.5s,color 0.5s; */
+    transition:all 0.5s;
+}
+.icons a:nth-child(1){
+    color:#1976d3;
+    background-image: linear-gradient(#fff 50%,#1976d3 50%);
+}
+.icons a:nth-child(2){
+    color:#f44236;
+    background-image: linear-gradient(#fff 50%,#f44236 50%);
+    
+}
+.icons a:nth-child(3){
+    color:#03a9f5;
+    background-image: linear-gradient(#fff 50%,#03a9f5 50%);
+}
+.icons :hover{
+    /* this moves upward to the top refer mdn position property with this (background-size: 100% 200%;
+    background-position: 0% 100%;) */
+    background-position: 0% 100%;
+    color:#fff;
+}

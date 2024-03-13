@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        html,body{
+            height:100%;
+            margin:0;
+        }
+        body{
+            cursor:url(1.png),auto;
+        }
+        
+        </style>
+</head>
+<body>
+    <script>
+        document.onmousemove=(e)=>{
+            let img=document.createElement("img");
+            img.src="1.png";
+            img.style.position="absolute";
+            img.style.left=e.pageX+"px";
+            img.style.top=e.pageY+"px";
+            img.animate([{opacity:0}],
+            {duration:400}).onfinish=()=>img.remove();
+            document.body.append(img);
+        };
+    </script>
+    
+</body>
+</html>
