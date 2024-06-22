@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website with Login & signup forms | Foolish Porgrammer</title>
+    <!-- Google Fonts Link for Icons -->
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Navigation Bar -->
+    <header>
+        <nav class="navbar">
+            <span class="menu-btn material-symbols-outlined">
+                Menu</span>
+            <a href="#" class="logo">
+                <img src="./img/logo.png" alt="logo">
+                <h2>Foolish Programmer</h2>
+            </a>
+            <ul class="links">
+                <span class="close-btn material-symbols-outlined">
+                    close</span>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Portfolio</a></li>
+                <li><a href="#">Courses</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Contact Us</a></li>
+            </ul>
+            <button class="login-btn">LOG IN </button>
+        </nav>
+    </header>
+    <!-- PopUp Forms -->
+    <!-- blur effect -->
+    <div class="blur-bg-overlay"></div>
+    <div class="form-popup">
+        <span class="close-btn material-symbols-outlined">
+            close</span>
+        <div class="form-box login">
+            <div class="form-details">
+                <h2>Welcome Back</h2>
+                <p>Please log in using your personal information to stay connected with us!</p>
+            </div>
+            <div class="form-content">
+                <h2>LOGIN</h2>
+                <form action="#">
+                    <div class="input-fields">
+                        <input type="text" name="email" id="email" required>
+                        <label for="email">Email</label>
+                    </div>
+                    <div class="input-fields">
+                        <input type="password" name="pass" id="pass" required>
+                        <label for="pass">Password</label>
+                    </div>
+                    <a href="#" class="forgot-pass">Forgot Password?</a>
+                    <button type="submit">Log In</button>
+                </form>
+                <div class="bottom-link">
+                    Don't have an account?
+                    <a href="#" id="signup-link">SignUp</a>
+                </div>
+            </div>
+        </div>
+        <div class="form-box signup">
+            <div class="form-details">
+                <h2>Create Account</h2>
+                <p>To become a part of our community ,please sign up using your personal information</p>
+            </div>
+            <div class="form-content">
+                <h2>SIGNUP</h2>
+                <form action="#">
+                    <div class="input-fields">
+                        <input type="text" name="email" id="email" required>
+                        <label for="email">Enter your email</label>
+                    </div>
+                    <div class="input-fields">
+                        <input type="password" name="pass" id="pass" required>
+                        <label for="pass">Create password</label>
+                    </div>
+                    <div class="policy-text">
+                        <input type="checkbox" name="" id="policy">
+                        <label for="policy">I agree the <a href="#">Terms & conditions</a></label>
+                    </div>
+                    <button type="submit">Sign Up</button>
+                </form>
+                <div class="bottom-link">
+                    Already have an account?
+                    <a href="#" id="login-link">Login</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="./script.js"></script>
+</body>
+
+</html>

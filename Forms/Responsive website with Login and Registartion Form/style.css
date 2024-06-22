@@ -1,0 +1,338 @@
+/* Import  */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wdth,wght@75..100,300..800&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Open Sans", sans-serif;
+}
+body{
+    width: 100%;
+    height: 100vh;
+    background: url('./img/4.jpg') center /cover no-repeat;
+}
+header{
+    position: fixed;
+    width: 100%;
+    left: 0;
+    top: 0;
+    padding: 0 10px;
+}
+.navbar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin:  0 auto;
+    padding: 22px 0;
+}
+.navbar .logo{
+    display: flex;
+    gap:10px;
+    align-items: center;
+    text-decoration: none;
+
+}
+.navbar .logo img{
+    width: 40px;
+    border-radius: 50%;
+  
+}
+.navbar .logo h2{
+    font-size: 1.7rem;
+    font-weight: 600;
+    color: #fff;
+}.navbar .logo h2:hover{
+    color: #ffb019;
+}
+.navbar .links{
+    display: flex; 
+    list-style: none;
+    gap: 35px;
+}
+.navbar .links a{
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: #fff;
+}
+.navbar .links a:hover{
+    color: #ffb019;
+}
+.navbar .login-btn{
+    border: none;
+    outline: none;
+    font-size: 1rem;
+    font-weight: 600;
+    padding: 10px 18px;
+    border-radius: 3px;
+    cursor: pointer;
+    background-color: #fff;
+    color: #275360;
+}
+.navbar .login-btn:hover{
+    color:  #ffb019;
+}
+.form-popup{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    /* transform: translate(-50%,-50%); */
+    /* changing when you make showopup */
+    transform: translate(-50%,-100%);
+    background: #fff;
+    border: 2px solid #fff;
+    max-width: 720px;
+    width: 100%;
+    /* newly added */
+    pointer-events: none;
+    opacity: 0;
+}
+.form-popup .close-btn{
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    color: #878484;
+    cursor: pointer;
+}
+.form-popup .form-box{
+    display: flex;
+
+}
+.form-box .form-details{
+    max-width: 330px;
+    /* part 2 stats here  after the line of 174 then come here and type*/
+    width: 100%;
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 20px;
+    /* background: url(./img/1.jpg) ;
+    background-size: cover;
+    background-position: center; */
+    color: #fff;
+    /* go to the html page and make signup page */
+}
+/* ake separate image by this */
+.login .form-details{
+    background: url(./img/2.jpg) ;
+    background-size: cover;
+    background-position: center;
+}
+.signup .form-details{
+    background: url(./img/1.jpg) ;
+    background-size: cover;
+    background-position: center;
+}
+.form-box h2{
+    text-align: center;
+    margin-bottom: 30px;
+   
+}
+.form-box .form-content{
+    width: 100%;
+    padding: 35px;
+    
+}
+form .input-fields{
+    height: 50px;
+    width: 100%;
+    margin-top: 20px;
+    position: relative;
+   
+   
+}
+form .input-fields input{
+    width: 100%;
+    height: 100%;
+    padding: 0 15px;
+    font-size: 0.95rem;
+    outline: none;
+    border-radius: 3px;
+    border: 1px solid #717171;
+}
+.input-fields input:focus{
+    color: #28bae2;
+
+}
+form .input-fields input:is(:focus,:valid){
+    padding: 16px 15px 0;
+}
+form .input-fields label{
+    position:absolute;
+    top: 50%;
+    left: 15px;
+    color: #717171;
+    pointer-events:none;
+    transform:translateY(-50%) ;
+    transition: 0.2s ease;
+}
+
+form .input-fields input:is(:focus,:valid) ~ label{
+    transform:translateY(-120%) ;
+    font-size: 0.75rem;
+    color: #28bae2;
+}
+
+.form-box a{
+    color: #00bcd4;
+    text-decoration: none;
+}
+.form-box a:hover{
+    text-decoration: underline;
+}
+/* new thigs to be added*/
+/* .form-box .forgot-pass{
+    display: inline-flex;
+    margin-top: 14px;
+    font-size: 0.95rem;
+} */
+.form-box :where(.forgot-pass,.policy-text){
+    display: inline-flex;
+    margin-top: 14px;
+    font-size: 0.95rem;
+}
+
+
+form button{
+    width: 100%;
+    outline: none;
+    border: none;
+    border-radius: 3px;
+    font-size: 1rem;
+    font-weight: 500;
+    padding: 14px 0;
+    margin: 25px 0;
+    color: #fff;
+    cursor: pointer;
+    background-color: #00bcd4;
+    transition: 0.2s ease;
+}
+form button:hover{
+    background-color: #0097a7;
+}
+
+.form-box .bottom-link{
+    text-align: center;
+}
+
+
+/* new things added */
+.signup .policy-text{
+    display: flex;
+    align-items: center;
+}
+
+.signup .policy-text input{
+    width: 14px;
+    height: 14px;
+    margin-right: 7px;
+}
+
+.form-popup .signup,.form-popup.show-signup  .login{
+    display: none;
+}
+.form-popup.show-signup .signup{
+    display: flex;
+}
+
+.blur-bg-overlay{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(5px);
+    pointer-events: none;
+    opacity: 0;
+    transition: 0.1s ease;
+
+}
+.show-popup .blur-bg-overlay{
+    opacity: 1;
+    pointer-events: auto;
+
+}
+.show-popup .form-popup{
+    opacity: 1;
+    pointer-events: auto;
+    transform: translate(-50%,-50%);
+    transition: transform 0.3s ease, opacity 0.1s ease;
+
+}
+.navbar .menu-btn{
+    color:#fff;
+    cursor: pointer;
+    font-size: 1.5rem;
+    display: none;
+}
+.navbar .links .close-btn{
+   
+    color:#000;
+    cursor: pointer;
+    font-size: 1.5rem;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    display: none;
+}
+
+
+
+@media(max-width:760px){
+    .form-popup{
+        width: 95%;
+    }
+    .form-box .form-details{
+        display: none;
+    }
+    .form-box .form-content{
+        padding: 30px 20px;
+    }
+}
+
+@media(max-width:950px){
+    .navbar{
+        padding: 15px 0;
+    }
+    .navbar .logo img{
+        display: none;
+    }
+    .navbar .logo h2{
+       font-size:1.4rem;
+    }
+    .navbar .links{
+        position: fixed;
+        left: 0;
+        left: -100%;
+        top: 0;
+        width: 100%;
+        height: 100vh;
+        background: #fff;
+        display: block;
+        padding-top: 60px;
+        text-align: center;
+        background-color: #fff;
+        transition: 0.2s ease;
+    }
+    .navbar .links.show-menu{
+        left:0;
+    }
+    .navbar .links a{
+        color:#000;
+        display: inline-flex;
+        margin: 20px 0;
+        font-size: 1.2rem;
+    }
+    .navbar .login-btn{
+        font-size: 0.9rem;
+        padding: 7px 10px;
+
+    }
+
+    .navbar :is(.menu-btn, .links .close-btn){
+        display: block;
+    }
+}

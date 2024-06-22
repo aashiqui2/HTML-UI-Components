@@ -1,0 +1,339 @@
+<html>
+    <head>
+        <title>Responsive Registration Form</title>
+        <link rel="stylesheet" href="style.css">
+        <style>
+            /* style.css:  */
+/* Step 0:  */
+h1{
+    font-family: Arial;
+    font-size: medium;
+    font-style: normal;
+    font-weight: bold;
+    color: brown;
+    text-align: center;
+    text-decoration: underline;
+}
+/* Link: https://developer.mozilla.org/en-US/docs/Web/CSS/font-size
+
+Step 1:  */
+
+input[type=text], input[type=email], input[type=number], input[type=select], input[type=date],input[type=select],input[type=password], input[type=tel]
+{
+    width: 45%; 
+}
+
+/* Step 2:  */
+input[type=text], input[type=email], input[type=number], input[type=select], input[type=date],input[type=select],input[type=password], input[type=tel]
+{
+    width: 40%;
+    padding: 12px;
+}
+
+/* Step 3:  */
+input[type=text], input[type=email], input[type=number], input[type=select], input[type=date],input[type=select],input[type=password], input[type=tel]
+{
+    width: 40%;
+    padding: 12px;
+border: 1px solid rgb(0, 0, 0);
+}
+
+/* Step 4:  */
+input[type=text], input[type=email], input[type=number], input[type=select], input[type=date],input[type=select],input[type=password], input[type=tel]
+{
+    width: 40%;
+    padding: 12px;
+border: 1px solid rgb(0, 0, 0);
+ border-radius: 2%;
+  /* // Try border-radius: 4px;  */
+}
+/* Step 5: 
+We shall add some styles on Radio buttons and Check boxes.  */
+
+input[type=radio],input[type=checkbox]{
+    width: 1%;
+    padding-left: 0%;
+    border: 1px solid rgb(168, 166, 166);
+    border-radius: 4px; 
+}
+/* Step 6: 
+Now, we can focus on Textarea part as it misses width and padding.  */
+
+textarea{
+    width:40%;
+    padding: 12px;
+    border: 1px solid rgb(0, 0, 0);
+    border-radius: 4px;
+}
+
+/* Step 7:  */
+ label{
+    padding: 12px 12px 12px 0;
+}
+
+/* Eg. 
+    padding: 25px 50px 75px 100px;
+        top padding is 25px
+        right padding is 50px
+        bottom padding is 75px
+        left padding is 100px
+         */
+/* Step 7-b:  */
+ label{
+    padding: 12px 12px 12px 0;
+    display: inline-block;
+}
+/* Refer: https://developer.mozilla.org/en-US/docs/Web/CSS/display */
+/*  */
+        
+ /* Step 8:  */
+ input[type=submit] {
+    background-color: green;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/* Step 9:  */
+.container{
+    border-radius: 5px;
+    background-color:#f2f2f2;
+    padding: 20px;
+}
+
+/* Step 10:  */
+.col-1{
+    float: left;
+    width:10%;
+    margin-top: 6px;
+}
+.col-2{
+    float: left;
+    width: 90%;
+    margin-top: 6px;
+}
+/* Refer: https://developer.mozilla.org/en-US/docs/Web/CSS/float */
+
+/* Step 11:  */
+.row:after{
+    content: "";
+    display: table;
+    clear: both;
+}
+/* display: table --> behaves like table element.  */
+
+/* Refer: https://developer.mozilla.org/en-US/docs/Web/CSS/clear */
+
+/* style.css: 
+-------- */
+
+
+h1{
+    font-family: Arial;
+    font-size: 20px; 
+    font-style: normal;
+    font-weight: bold;
+    color: brown;
+    text-align: center;
+    text-decoration: underline;
+}
+
+input[type=text], input[type=email], input[type=number], input[type=select], input[type=date],input[type=select],input[type=password], input[type=tel]
+{
+    width: 40%;
+    padding: 12px;
+    border: 1px solid rgb(0, 0, 0);
+    border-radius: 2%;
+    
+}
+
+input[type=radio],input[type=checkbox]{
+    width: 1%;
+    padding-left: 0%;
+    border: 1px solid rgb(168, 166, 166);
+    border-radius: 4px;
+    
+}
+
+textarea{
+    width:40%;
+    padding: 12px;
+    border: 1px solid rgb(0, 0, 0);
+    border-radius: 4px;
+}
+
+label{
+    padding:  12px 12px 12px 0;
+    display: inline-block; 
+}
+
+
+input[type=submit] {
+    background-color: green;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    float: left;
+}
+
+input[type=submit]:hover {
+background-color: red;
+}
+
+.container{
+    border-radius: 5px;
+    background-color:#f2f2f2;
+    padding: 20px;
+}
+
+.col-1{
+    float: left;
+    width:10%;
+    margin-top: 6px;
+}
+.col-2{
+    float: left;
+    width: 90%;
+    margin-top: 6px;
+}
+
+.row:after{
+    content: "";
+    display: table;
+    clear: both;
+}
+
+
+        </style>
+    </head>
+       
+    <body>
+        <h1>Registration Form</h1>
+        <div class="container">
+            <div class="row">
+                <div class="col-1">
+                    <label for="fname">First Name:</label>
+                </div>
+                <div class="col-2">
+                    <input type="text" id="fname" name="firstname" placeholder="Enter your first name">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-1">
+                    <label for="lname">Last Name:</label>
+                </div>
+                <div class="col-2">
+                    <input type="text" id="lname" name="lastname" placeholder="Enter your last name">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-1">
+                    <label for="email">Email:</label>
+                </div>
+                <div class="col-2">
+                    <input type="email" id="email" name="email" placeholder="it should contain @,." required>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-1">
+                    <label for="mobile">Mobile:</label>
+                </div>
+                <div class="col-2">
+                    <input type="tel" id="mobile" name="mobile" placeholder="only 10 digits are allowed" required>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-1">
+                    <label for="gender" required>Gender:</label>
+                </div>
+                <div class="col-2">
+                    <input type="radio" id="male" name="gender" value="male"/>Male
+                    <input type="radio" id="female" name="gender" value="female"/>Female
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-1">
+                    <label for="dob">Date Of Birth:</label>
+                </div>
+                <div class="col-2">
+                    <input type="date" id="dob" name="dob">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-1">
+                    <label for="address">Address:</label>
+                </div>
+                <div class="col-2">
+                    <textarea name="address" id="address" cols="30" rows="10"></textarea>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-1">
+                    <label for="city">City:</label>
+                </div>
+                <div class="col-2">
+                    <input type="text" id="city" name="city" maxlength="10">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-1">
+                    <label for="pincode">Area PIN:</label>
+                </div>
+                <div class="col-2">
+                    <input type="number" id="pin" name="pin" maxlength="6">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-1">
+                    <label for="state">State:</label>
+                </div>
+                <div class="col-2">
+                    <input type="text" id="state" name="state">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-1">
+                    <label for="qualification" required >Qualification:</label>
+                </div>
+                <div class="col-2">
+                    <select name="qualification" id="qualification">
+                        <option value=" ">Select Qualification:</option>
+                        <option value="Graduation">Graduation</option>
+                        <option value="BTech.">BTech.</option>
+                        <option value="MTech.">MTech.</option>
+                        <option value="MCA">MCA</option>
+                        <option value="BCA">BCA</option>
+                    </select>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-1">
+                    <label for="department">Specialization:</label>
+                </div>
+                <div class="col-2">
+                    <input type="checkbox" class="department" id="cs" name="department[]" value="Computer Science">Computer Science<br/>
+                    <input type="checkbox" class="department" id="it" name="department[]" value="Information Technology">Information Technology<br/>
+                    <input type="checkbox" class="department" id="ca" name="department[]" value="Computer Architecture">Electronics and Communication<br/>
+                    <input type="checkbox" class="department" id="tc" name="department[]" value="Tele Communication">Computer Applications<br/>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-1">
+                    <label for="password">Password:</label>
+                </div>
+                <div class="col-2">
+                    <input type="password" id="password" name="password" maxlength="8">
+                </div>
+            </div>
+            <div class="row">
+                <input type="submit" value="Registered">
+            </div>  
+        </div>  
+    </body>
+</html>
+
+

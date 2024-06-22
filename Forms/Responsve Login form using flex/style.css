@@ -1,0 +1,30 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.form{
+    background: linear-gradient(rgb(231, 27, 27),yellow);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+.user{
+    flex:1 0 8rem;
+}
+.pass{
+    flex:1 0 8rem;
+}
+button{
+    flex:1 0 4rem;
+}
